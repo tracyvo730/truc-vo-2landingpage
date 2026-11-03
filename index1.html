@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trúc Võ - Thay Đổi Từ Một Khoảnh Khắc (6 Tuần)</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: {
+                            50: '#FFF5F7',
+                            100: '#FCE7F0',
+                            200: '#F8C8DC',
+                            300: '#F4A5C7',
+                            500: '#D85A8A',
+                            600: '#C23B6F',
+                            700: '#9E2251',
+                            800: '#7B183E',
+                            900: '#4A0D25'
+                        },
+                        earth: {
+                            50: '#FFFAFC',
+                            100: '#FDF0F5',
+                            200: '#FADEEA',
+                            300: '#F2B8D2',
+                            500: '#C95383',
+                            600: '#AA3565',
+                            700: '#8A204C',
+                            800: '#5E1332',
+                            900: '#3D0A1F'
+                        },
+                        // TÔNG MÀU VÀNG NHẠT VÀ TRẮNG CHỦ ĐẠO CHO TRANG MỚI 13/11
+                        sunCream: {
+                            50: '#FFFDF5',
+                            100: '#FEF9E7',
+                            200: '#FDF2C7',
+                            300: '#FCE498',
+                            400: '#F7CB59',
+                            500: '#E8B130',
+                            600: '#C99120',
+                            700: '#9E6F18',
+                            800: '#7C5517',
+                            900: '#4D340E',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                        handwriting: ['"Caveat"', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #FFFDF5;
+            color: #4D340E;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .font-serif-title { font-family: 'Playfair Display', Georgia, serif; }
+        .font-handwriting { font-family: 'Caveat', cursive; }
+
+        .glass-panel {
+            background: rgba(255, 253, 245, 0.95);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(253, 242, 199, 0.8);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(253, 242, 199, 0.9);
+        }
+
+        .shadow-warm {
+            box-shadow: 0 15px 35px -10px rgba(158, 111, 24, 0.12), 0 5px 15px -5px rgba(124, 85, 23, 0.08);
+        }
+        
+        .shadow-hover {
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .shadow-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 25px 45px -12px rgba(158, 111, 24, 0.22), 0 10px 20px -5px rgba(124, 85, 23, 0.12);
+        }
+
+        .bg-pattern {
+            background-image: radial-gradient(#C99120 0.6px, transparent 0.6px);
+            background-size: 32px 32px;
+            opacity: 0.08;
+        }
+    </style>
+</head>
+<body class="relative font-sans text-sunCream-900 selection:bg-sunCream-200 selection:text-sunCream-900 text-base leading-relaxed bg-sunCream-50/60">
+
+    <div class="fixed inset-0 bg-pattern pointer-events-none z-0"></div>
+
+    <!-- NAVIGATION HEADER -->
+    <nav class="sticky top-0 z-50 w-full glass-panel border-b border-sunCream-200 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                
+                <!-- BRAND LOGO -->
+                <div class="flex items-center gap-3">
+                    <a href="#" class="w-11 h-11 rounded-full bg-sunCream-700 text-white flex items-center justify-center font-serif text-xl font-bold shadow-md hover:bg-sunCream-800 transition-all flex-shrink-0">
+                        TV
+                    </a>
+                    <div class="flex flex-col items-start">
+                        <a href="#" class="font-serif-title text-xl font-bold text-sunCream-900 leading-none hover:text-sunCream-700 transition-colors">TRÚC VÕ</a>
+                        <span class="text-[10px] font-bold text-sunCream-700 uppercase tracking-widest mt-1">Phương Pháp Khoảng Dừng</span>
+                    </div>
+                </div>
+
+                <!-- MENU TRANG 13/11 ĐÃ RÚT GỌN CHÍNH XÁC 4 MỤC -->
+                <div class="hidden lg:flex items-center space-x-8 text-xs font-bold uppercase tracking-wider text-sunCream-900">
+                    <a href="#sec-intro-1311" class="hover:text-sunCream-600 transition-colors">Giới Thiệu</a>
+                    <a href="#sec-fit-1311" class="hover:text-sunCream-600 transition-colors">Đối Tượng</a>
+                    <a href="#sec-roadmap-1311" class="hover:text-sunCream-600 transition-colors">Lộ Trình 6 Tuần</a>
+                    <a href="#sec-register-1311" class="hover:text-sunCream-600 transition-colors">Học Phí</a>
+                </div>
+
+                <!-- ACTION BUTTONS -->
+                <div class="hidden sm:flex items-center space-x-3">
+                    <a href="https://www.facebook.com/truc.vo.211966?locale=vi_VN" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-sunCream-100 text-sunCream-800 flex items-center justify-center hover:bg-sunCream-700 hover:text-white transition-all shadow-sm text-sm">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@tracyvo451" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-sunCream-100 text-sunCream-800 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all shadow-sm text-sm">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <button onclick="openModal()" class="bg-sunCream-700 hover:bg-sunCream-800 text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full shadow-md transition-all flex items-center gap-1.5 hover:scale-105">
+                        <span>Đăng Ký</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- MOBILE MENU BUTTON -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-sunCream-900 p-2 focus:outline-none">
+                        <i class="fa-solid fa-bars-staggered text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU DROPDOWN -->
+        <div id="mobile-menu" class="hidden lg:hidden glass-panel border-t border-sunCream-200 px-6 pt-4 pb-6 space-y-3 shadow-xl">
+            <a href="#sec-intro-1311" class="block text-sunCream-900 font-bold text-sm hover:text-sunCream-600">Giới Thiệu</a>
+            <a href="#sec-fit-1311" class="block text-sunCream-900 font-bold text-sm hover:text-sunCream-600">Đối Tượng Tham Gia</a>
+            <a href="#sec-roadmap-1311" class="block text-sunCream-900 font-bold text-sm hover:text-sunCream-600">Lộ Trình 6 Tuần</a>
+            <a href="#sec-register-1311" class="block text-sunCream-900 font-bold text-sm hover:text-sunCream-600">Học Phí & Đăng Ký</a>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT - TRANG 13/11 (6 TUẦN PHƯƠNG PHÁP KHOẢNG DỪNG) -->
+    <main id="page-1311">
+        
+        <!-- HERO SECTION -->
+        <section id="sec-intro-1311" class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden bg-gradient-to-b from-sunCream-100/70 via-sunCream-50 to-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sunCream-700 text-white text-xs font-bold uppercase tracking-wider shadow-sm">
+                            <i class="fa-solid fa-sparkles text-sunCream-200"></i>
+                            <span>Chương Trình Đồng Hành Thực Chiến 6 Tuần</span>
+                        </div>
+
+                        <h1 class="font-serif-title text-4xl sm:text-5xl lg:text-6xl font-bold text-sunCream-900 leading-tight">
+                            THAY ĐỔI TỪ MỘT KHOẢNH KHẮC
+                        </h1>
+                        <h2 class="text-xl sm:text-2xl font-bold text-sunCream-700 font-serif italic">
+                            6 tuần thực hành Phương Pháp Khoảng Dừng cùng Trúc Võ
+                        </h2>
+
+                        <div class="bg-white p-6 rounded-2xl border border-sunCream-200 shadow-warm space-y-3 text-left">
+                            <p class="font-bold text-lg text-sunCream-900">
+                                Bạn đã hiểu rất nhiều về phát triển bản thân. Nhưng tại sao trong những khoảnh khắc đời thường, bạn vẫn phản ứng theo cách mình không mong muốn?
+                            </p>
+                            <ul class="space-y-2 text-sm sm:text-base text-sunCream-800">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-angle-right text-sunCream-600 mt-1"></i>
+                                    <span>Bạn biết mình nên bình tĩnh, nhưng vẫn nổi nóng khi con không nghe lời.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-angle-right text-sunCream-600 mt-1"></i>
+                                    <span>Bạn muốn được thấu hiểu, nhưng khi chồng không đồng ý, bạn lập tức cảm thấy tổn thương và muốn tranh luận.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-angle-right text-sunCream-600 mt-1"></i>
+                                    <span>Bạn biết không nên suy diễn, nhưng vẫn bị cuốn vào những suy nghĩ khiến mình khó chịu suốt cả ngày.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <p class="text-base sm:text-lg text-sunCream-800 leading-relaxed font-medium">
+                            Bạn không thiếu kiến thức. Có thể điều bạn cần lúc này là học cách đưa những gì mình đã biết vào chính khoảnh khắc mình đang sống. 
+                            <strong>Thay đổi từ một khoảnh khắc</strong> là hành trình 6 tuần giúp bạn nhận diện điều đang diễn ra bên trong mình, hiểu những phản ứng quen thuộc và từng bước lấy lại quyền lựa chọn trước khi phản ứng.
+                        </p>
+
+                        <div class="pt-2 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <button onclick="openModal()" class="inline-flex items-center justify-center gap-3 bg-sunCream-700 hover:bg-sunCream-800 text-white font-bold text-base px-8 py-4 rounded-full shadow-lg transition-all hover:scale-105">
+                                <span>Đăng Ký Hành Trình 6 Tuần</span>
+                                <i class="fa-solid fa-arrow-right text-sm"></i>
+                            </button>
+                            <a href="#sec-roadmap-1311" class="inline-flex items-center justify-center gap-2 bg-sunCream-100 hover:bg-sunCream-200 text-sunCream-900 font-bold text-base px-8 py-4 rounded-full border border-sunCream-300 transition-all">
+                                <span>Xem Lộ Trình 6 Tuần</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 flex justify-center relative">
+                        <div class="relative w-full max-w-md">
+                            <div class="relative rounded-3xl p-3 bg-white shadow-warm border border-sunCream-200 shadow-hover">
+                                <div class="relative rounded-2xl overflow-hidden aspect-[4/5] bg-sunCream-50">
+                                    <img src="trucvoava.jpg" alt="Trúc Võ" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-sunCream-900/80 via-transparent to-transparent"></div>
+                                    
+                                    <div class="absolute bottom-5 left-5 right-5 glass-panel p-4 rounded-xl text-center border border-white/60 bg-white/95">
+                                        <p class="font-serif-title text-2xl font-bold text-sunCream-900">Trúc Võ</p>
+                                        <p class="text-xs text-sunCream-700 font-semibold mt-1">Đồng hành Phương Pháp Khoảng Dừng</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: ĐỐI TƯỢNG THAM GIA -->
+        <section id="sec-fit-1311" class="py-20 bg-white border-y border-sunCream-200/50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto space-y-3 mb-14">
+                    <span class="px-4 py-1.5 rounded-full bg-sunCream-100 text-sunCream-800 text-xs font-bold uppercase tracking-wider">Chân Dung Học Viên</span>
+                    <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-sunCream-900">
+                        Chương Trình Này Dành Cho Ai?
+                    </h2>
+                    <p class="text-sunCream-800 text-sm sm:text-base">Dành cho những người đã học hỏi, đọc sách hoặc tham gia các chương trình phát triển bản thân nhưng vẫn chưa duy trì được trong đời sống thực tế.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <div class="bg-sunCream-50/80 p-8 rounded-3xl border border-sunCream-200 shadow-sm space-y-5">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-sunCream-700 text-white flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <h3 class="font-serif-title text-2xl font-bold text-sunCream-900">DÀNH CHO BẠN nếu thường xuyên:</h3>
+                        </div>
+
+                        <ul class="space-y-4 text-sm sm:text-base text-sunCream-800">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-sunCream-700 mt-1 flex-shrink-0"></i>
+                                <span>Mất bình tĩnh với con rồi hối hận.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-sunCream-700 mt-1 flex-shrink-0"></i>
+                                <span>Cảm thấy giận dữ, tổn thương khi người thân không đồng ý hoặc không làm theo mong muốn của mình.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-sunCream-700 mt-1 flex-shrink-0"></i>
+                                <span>Suy diễn từ một câu nói, một thái độ hoặc một tình huống nhỏ.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-sunCream-700 mt-1 flex-shrink-0"></i>
+                                <span>Biết mình cần thay đổi nhưng chưa duy trì được trong đời sống thực tế.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-sunCream-700 mt-1 flex-shrink-0"></i>
+                                <span>Muốn xây dựng những mối quan hệ bình an hơn, bắt đầu từ việc hiểu chính mình.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-amber-50/50 p-8 rounded-3xl border border-amber-200/80 shadow-sm space-y-5">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-amber-700 text-white flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                            <h3 class="font-serif-title text-2xl font-bold text-sunCream-900">KHÔNG DÀNH CHO BẠN nếu:</h3>
+                        </div>
+
+                        <ul class="space-y-4 text-sm sm:text-base text-sunCream-800">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-xmark text-amber-700 mt-1 flex-shrink-0"></i>
+                                <span>Bạn chỉ muốn tìm cách kiểm soát cảm xúc tức thì.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-xmark text-amber-700 mt-1 flex-shrink-0"></i>
+                                <span>Mong người khác thay đổi mà chưa sẵn lòng nhìn lại bản thân.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-xmark text-amber-700 mt-1 flex-shrink-0"></i>
+                                <span>Chưa sẵn sàng dành thời gian thực hành mỗi ngày.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-xmark text-amber-700 mt-1 flex-shrink-0"></i>
+                                <span>Cần hỗ trợ tâm lý hoặc điều trị chuyên môn (đây không phải chương trình thay thế y tế).</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: LỘ TRÌNH 6 TUẦN -->
+        <section id="sec-roadmap-1311" class="py-20 bg-sunCream-100/50">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto space-y-3 mb-14">
+                    <span class="px-4 py-1.5 rounded-full bg-sunCream-200 text-sunCream-900 text-xs font-bold uppercase tracking-wider">Hành Trình Từng Bước</span>
+                    <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-sunCream-900">
+                        Lộ Trình 6 Tuần Đồng Hành
+                    </h2>
+                    <p class="text-sunCream-800 text-base sm:text-lg">Từng bước nhỏ đưa tri thức vào đời sống thực tế mỗi ngày.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="p-6 rounded-2xl bg-white border border-sunCream-200 shadow-sm space-y-3 hover:shadow-md transition-shadow">
+                        <span class="px-3 py-1 rounded-lg bg-sunCream-700 text-white font-bold text-xs">Tuần 1</span>
+                        <h3 class="font-serif-title text-xl font-bold text-sunCream-900">NHÌN</h3>
+                        <p class="text-sm text-sunCream-800">Nhận diện tình huống kích hoạt và phản ứng quen thuộc.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-white border border-sunCream-200 shadow-sm space-y-3 hover:shadow-md transition-shadow">
+                        <span class="px-3 py-1 rounded-lg bg-sunCream-700 text-white font-bold text-xs">Tuần 2</span>
+                        <h3 class="font-serif-title text-xl font-bold text-sunCream-900">HIỂU</h3>
+                        <p class="text-sm text-sunCream-800">Gọi tên cảm xúc, nhận biết những tín hiệu từ cơ thể.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-white border border-sunCream-200 shadow-sm space-y-3 hover:shadow-md transition-shadow">
+                        <span class="px-3 py-1 rounded-lg bg-sunCream-700 text-white font-bold text-xs">Tuần 3</span>
+                        <h3 class="font-serif-title text-xl font-bold text-sunCream-900">NHẬN RA</h3>
+                        <p class="text-sm text-sunCream-800">Phân biệt sự việc thực tế với suy nghĩ và cách tâm trí diễn giải.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-white border border-sunCream-200 shadow-sm space-y-3 hover:shadow-md transition-shadow">
+                        <span class="px-3 py-1 rounded-lg bg-sunCream-700 text-white font-bold text-xs">Tuần 4</span>
+                        <h3 class="font-serif-title text-xl font-bold text-sunCream-900">KHÁM PHÁ</h3>
+                        <p class="text-sm text-sunCream-800">Nhận diện những niềm tin và kỳ vọng đang ảnh hưởng đến cách bạn phản ứng.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-white border border-sunCream-200 shadow-sm space-y-3 hover:shadow-md transition-shadow">
+                        <span class="px-3 py-1 rounded-lg bg-sunCream-700 text-white font-bold text-xs">Tuần 5</span>
+                        <h3 class="font-serif-title text-xl font-bold text-sunCream-900">LỰA CHỌN</h3>
+                        <p class="text-sm text-sunCream-800">Thực hành cách đáp lại mới, giao tiếp phù hợp hơn và học cách sửa chữa khi quay lại phản ứng cũ.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-white border border-sunCream-200 shadow-sm space-y-3 hover:shadow-md transition-shadow">
+                        <span class="px-3 py-1 rounded-lg bg-sunCream-700 text-white font-bold text-xs">Tuần 6</span>
+                        <h3 class="font-serif-title text-xl font-bold text-sunCream-900">CỦNG CỐ</h3>
+                        <p class="text-sm text-sunCream-800">Nhìn lại hành trình, ghi nhận những thay đổi đã có và xây dựng kế hoạch tiếp tục thực hành trong đời sống hằng ngày.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: GIÁ TRỊ NHẬN ĐƯỢC -->
+        <section class="py-20 bg-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-sunCream-50/70 rounded-3xl p-8 sm:p-12 border border-sunCream-200 shadow-warm space-y-8">
+                    <div class="text-center space-y-2">
+                        <span class="px-4 py-1.5 rounded-full bg-sunCream-200 text-sunCream-900 text-xs font-bold uppercase tracking-wider">Thành Quả Tham Gia</span>
+                        <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-sunCream-900">BẠN SẼ NHẬN ĐƯỢC GÌ?</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-4 rounded-xl bg-white border border-sunCream-200 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-sunCream-700 text-lg"></i>
+                            <span class="text-sm sm:text-base font-medium text-sunCream-900">6 buổi đồng hành trực tiếp qua Zoom.</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white border border-sunCream-200 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-sunCream-700 text-lg"></i>
+                            <span class="text-sm sm:text-base font-medium text-sunCream-900">Bài tập quan sát và thực hành theo từng tuần.</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white border border-sunCream-200 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-sunCream-700 text-lg"></i>
+                            <span class="text-sm sm:text-base font-medium text-sunCream-900">Công cụ nhận diện cảm xúc, suy nghĩ và niềm tin.</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white border border-sunCream-200 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-sunCream-700 text-lg"></i>
+                            <span class="text-sm sm:text-base font-medium text-sunCream-900">Nhật ký quan sát tình huống trong đời sống thực tế.</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white border border-sunCream-200 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-sunCream-700 text-lg"></i>
+                            <span class="text-sm sm:text-base font-medium text-sunCream-900">Phản hồi và hỗ trợ gỡ rối bài tập từ Trúc trong khung giờ đồng hành hằng ngày.</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-white border border-sunCream-200 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-sunCream-700 text-lg"></i>
+                            <span class="text-sm sm:text-base font-medium text-sunCream-900">Cơ hội nhìn lại tiến trình, nhận diện điểm mù và ghi nhận sự thay đổi.</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-white border border-sunCream-300 text-center text-sm sm:text-base text-sunCream-900 italic font-medium">
+                        "Bạn không cần trở thành người luôn bình tĩnh. Bạn sẽ có cơ hội học cách nhận ra cảm xúc sớm hơn, hiểu mình rõ hơn và lựa chọn cách phản ứng phù hợp hơn."
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: LỊCH ZOOM & THỰC HÀNH -->
+        <section class="py-20 bg-sunCream-100/40 border-y border-sunCream-200/60">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+                <div class="text-center space-y-2">
+                    <span class="px-4 py-1.5 rounded-full bg-sunCream-200 text-sunCream-900 text-xs font-bold uppercase tracking-wider">Thời Gian Chi Tiết</span>
+                    <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-sunCream-900">LỊCH ĐỒNG HÀNH QUA ZOOM & THỰC HÀNH</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-3xl border border-sunCream-200 shadow-sm space-y-4">
+                        <h3 class="font-serif-title text-xl font-bold text-sunCream-900 border-b border-sunCream-100 pb-3">
+                            <i class="fa-solid fa-video text-sunCream-700 mr-2"></i> Lịch Zoom Trực Tiếp (6 buổi)
+                        </h3>
+                        <p class="text-sm text-sunCream-800"><strong>Thời lượng:</strong> 6 tuần | <strong>Thời gian:</strong> Thứ Sáu, 20:00–21:00</p>
+                        <ul class="space-y-2 text-sm text-sunCream-900 font-medium">
+                            <li>• Buổi 1: 13/11/2026</li>
+                            <li>• Buổi 2: 20/11/2026</li>
+                            <li>• Buổi 3: 27/11/2026</li>
+                            <li>• Buổi 4: 04/12/2026</li>
+                            <li>• Buổi 5: 11/12/2026</li>
+                            <li>• Buổi 6: 18/12/2026</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-3xl border border-sunCream-200 shadow-sm space-y-4">
+                        <h3 class="font-serif-title text-xl font-bold text-sunCream-900 border-b border-sunCream-100 pb-3">
+                            <i class="fa-solid fa-pen-to-square text-sunCream-700 mr-2"></i> Thực Hành Hằng Ngày
+                        </h3>
+                        <ul class="space-y-2.5 text-sm text-sunCream-800">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-sunCream-600 mt-1"></i>
+                                <span>Dành ít phút định tâm và quan sát bản thân.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-sunCream-600 mt-1"></i>
+                                <span>Ghi lại một tình huống đáng chú ý trong ngày.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-sunCream-600 mt-1"></i>
+                                <span>Gửi bài tập trước 20:00.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-sunCream-600 mt-1"></i>
+                                <span>Ghi nhận một nỗ lực của bản thân trước khi đi ngủ.</span>
+                            </li>
+                        </ul>
+                        <div class="pt-3 border-t border-sunCream-100 text-xs text-sunCream-900">
+                            <strong>Khung giờ phản hồi:</strong> 20:00–21:00 hằng ngày, Trúc trực tiếp đọc, phản hồi và hỗ trợ gỡ rối bài tập.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: ĐĂNG KÝ HỌC PHÍ -->
+        <section id="sec-register-1311" class="py-20 bg-sunCream-100/50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-warm border-2 border-sunCream-300 text-center space-y-6">
+                    
+                    <div class="space-y-2">
+                        <span class="px-4 py-1.5 rounded-full bg-sunCream-700 text-white text-xs font-bold uppercase tracking-wider">HỌC PHÍ ĐỒNG HÀNH</span>
+                        <h2 class="font-serif-title text-3xl sm:text-4xl font-bold text-sunCream-900">BẠN CÓ SẴN SÀNG BẮT ĐẦU TỪ MỘT KHOẢNH KHẮC?</h2>
+                    </div>
+
+                    <div class="py-4 border-y border-sunCream-100 max-w-md mx-auto">
+                        <p class="text-4xl font-bold text-sunCream-700">1.699.000 VNĐ / 6 tuần</p>
+                        <p class="text-xs text-sunCream-800 mt-2">Bao gồm 6 buổi Zoom, hệ thống bài tập thực hành, các công cụ hỗ trợ và sự đồng hành, phản hồi bài tập hằng ngày.</p>
+                    </div>
+
+                    <p class="text-sm sm:text-base text-sunCream-800 leading-relaxed max-w-2xl mx-auto italic">
+                        "Bạn không cần chờ đến khi mình đủ bình tĩnh mới bắt đầu thay đổi. Bạn chỉ cần sẵn lòng nhìn lại một tình huống đã xảy ra, tò mò về điều đang diễn ra bên trong và thực hành một lựa chọn khác khi có cơ hội."
+                    </p>
+
+                    <div class="text-left bg-sunCream-50 p-6 rounded-2xl border border-sunCream-200/80 space-y-2 text-xs sm:text-sm max-w-md mx-auto">
+                        <p class="font-bold text-sunCream-900 uppercase text-xs"><i class="fa-solid fa-building-columns mr-1.5"></i> Thông Tin Chuyển Khoản MB Bank</p>
+                        <div class="flex justify-between"><span class="text-sunCream-800">Số tài khoản:</span><span class="font-bold text-sunCream-700 text-base">019228966666</span></div>
+                        <div class="flex justify-between"><span class="text-sunCream-800">Chủ tài khoản:</span><span class="font-bold text-sunCream-900">VÕ THANH THIÊN</span></div>
+                        <p class="text-xs text-sunCream-700 italic pt-2 border-t border-sunCream-200">Cú pháp: Khoang Dung + SĐT + Tên</p>
+                    </div>
+
+                    <div>
+                        <button onclick="openModal()" class="px-10 py-4 rounded-xl bg-sunCream-700 hover:bg-sunCream-800 text-white font-bold text-sm uppercase tracking-wider transition-all shadow-md hover:scale-105">
+                            ĐĂNG KÝ HÀNH TRÌNH 6 TUẦN
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-sunCream-100/80 text-sunCream-900 py-12 border-t border-sunCream-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-8 border-b border-sunCream-200">
+                <div class="md:col-span-7 space-y-2 text-center md:text-left">
+                    <span class="font-serif-title text-2xl font-bold text-sunCream-900">TRÚC VÕ</span>
+                    <p class="text-sm text-sunCream-800 max-w-lg leading-relaxed">"Món quà lớn nhất không phải là một thế giới không còn biến cố, mà là một người phụ nữ vững chãi, biết cách dừng lại và vận hành một nhịp sống bình an."</p>
+                </div>
+
+                <div class="md:col-span-5 flex justify-center md:justify-end items-center gap-4">
+                    <a href="https://www.facebook.com/truc.vo.211966?locale=vi_VN" target="_blank" class="w-10 h-10 rounded-full bg-white text-sunCream-800 border border-sunCream-200 flex items-center justify-center hover:bg-sunCream-700 hover:text-white transition-colors shadow-sm">
+                        <i class="fa-brands fa-facebook-f text-base"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@tracyvo451" target="_blank" class="w-10 h-10 rounded-full bg-white text-sunCream-800 border border-sunCream-200 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors shadow-sm">
+                        <i class="fa-brands fa-youtube text-base"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-6 text-center text-xs text-sunCream-800">
+                © 2026 Trúc Võ - Phương Pháp Khoảng Dừng (6 Tuần)
+            </div>
+        </div>
+    </footer>
+
+    <!-- REGISTRATION MODAL CHUNG -->
+    <div id="modal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-sunCream-900/40 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative border border-sunCream-200">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-sunCream-700 w-8 h-8 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+
+            <div class="text-center space-y-1 mb-6">
+                <span class="text-xs font-bold text-sunCream-700 uppercase tracking-widest">Đăng Ký Giữ Chỗ</span>
+                <h3 id="modal-title" class="font-serif-title text-2xl font-bold text-sunCream-900">Khoảng Dừng 6 Tuần</h3>
+            </div>
+
+            <form id="reg-form" action="https://formspree.io/f/mwlpjgqb" method="POST" onsubmit="submitForm(event)" class="space-y-4">
+                <!-- Tiêu đề Email Tự Động Phân Loại Cho Gói 6 Tuần -->
+                <input type="hidden" name="_subject" value="Đăng ký mới - Khoảng Dừng 6 Tuần (13/11)">
+
+                <div>
+                    <label class="block text-xs font-bold text-sunCream-900 uppercase mb-1">Họ và Tên</label>
+                    <input type="text" name="name" required placeholder="Nguyễn Văn A" class="w-full px-4 py-3 rounded-xl bg-sunCream-50/50 border border-sunCream-200 text-sm focus:outline-none focus:border-sunCream-600">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-sunCream-900 uppercase mb-1">Số Điện Thoại (Zalo)</label>
+                    <input type="tel" name="phone" required placeholder="0901234567" class="w-full px-4 py-3 rounded-xl bg-sunCream-50/50 border border-sunCream-200 text-sm focus:outline-none focus:border-sunCream-600">
+                </div>
+
+                <button type="submit" id="submit-btn" class="w-full py-4 bg-sunCream-700 hover:bg-sunCream-800 text-white font-bold rounded-xl text-xs uppercase tracking-wider transition-all shadow-md">
+                    Xác Nhận Đăng Ký Giữ Chỗ
+                </button>
+            </form>
+
+            <div id="modal-success" class="hidden text-center py-6 space-y-3">
+                <div class="w-12 h-12 bg-sunCream-100 text-sunCream-800 rounded-full flex items-center justify-center mx-auto text-xl">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h4 class="font-bold text-lg text-sunCream-900">Gửi Thông Tin Thành Công!</h4>
+                <p class="text-sm text-sunCream-800">Trúc Võ sẽ liên hệ trực tiếp qua Zalo để xác nhận giữ chỗ cho bạn trong vòng 12 tiếng.</p>
+                <button onclick="closeModal()" class="mt-4 px-6 py-2 bg-sunCream-700 text-white text-xs font-bold rounded-lg">Đóng</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        const btnMobile = document.getElementById('mobile-menu-btn');
+        const menuMobile = document.getElementById('mobile-menu');
+        if (btnMobile && menuMobile) {
+            btnMobile.addEventListener('click', () => menuMobile.classList.toggle('hidden'));
+        }
+
+        const modal = document.getElementById('modal');
+        function openModal() {
+            document.getElementById('reg-form').reset();
+            document.getElementById('reg-form').classList.remove('hidden');
+            document.getElementById('modal-success').classList.add('hidden');
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+        }
+
+        async function submitForm(e) {
+            e.preventDefault();
+            const form = e.target;
+            const submitBtn = document.getElementById('submit-btn');
+            const data = new FormData(form);
+            submitBtn.disabled = true;
+            submitBtn.innerText = "ĐANG GỬI...";
+
+            try {
+                const response = await fetch(form.action, { 
+                    method: form.method, 
+                    body: data, 
+                    headers: { 'Accept': 'application/json' } 
+                });
+                if (response.ok) {
+                    form.classList.add('hidden');
+                    document.getElementById('modal-success').classList.remove('hidden');
+                } else {
+                    alert("Có lỗi xảy ra khi gửi thông tin! Vui lòng thử lại.");
+                }
+            } catch (error) {
+                alert("Không thể kết nối mạng! Vui lòng kiểm tra lại đường truyền.");
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerText = "XÁC NHẬN ĐĂNG KÝ GIỮ CHỖ";
+            }
+        }
+    </script>
+</body>
+</html>
